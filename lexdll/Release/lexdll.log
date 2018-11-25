@@ -1,0 +1,17 @@
+﻿  stdafx.cpp
+stdafx.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\code\c#\mycompiler\lexdll\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\code\c#\mycompiler\lexdll\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  dllmain.cpp
+dllmain.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  lex.cpp
+lex.cpp(22): warning C4101: “count”: 未引用的局部变量
+lex.cpp(23): warning C4101: “flag”: 未引用的局部变量
+  lexdll.cpp
+lexdll.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+    正在创建库 F:\code\c#\mycompiler\Release\lexdll.lib 和对象 F:\code\c#\mycompiler\Release\lexdll.exp
+  正在生成代码
+  All 139 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  lexdll.vcxproj -> F:\code\c#\mycompiler\Release\lexdll.dll
+  lexdll.vcxproj -> F:\code\c#\mycompiler\Release\lexdll.pdb (Full PDB)
