@@ -13,7 +13,7 @@ namespace mycompiler
     public partial class mycompiler : Form
     {
         [DllImport("F:\\code\\c#\\mycompiler\\Debug\\lexdll.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void lex();
+        public static extern int lex();
         string filename = "";
         public mycompiler()
         {
@@ -76,12 +76,40 @@ namespace mycompiler
 
         private void 编译ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lex();
+            int flag = 0;
+            int sum = 0;
+            flag=lex();
+            sum += flag;
+            if (sum!=0)
+            {
+                richTextBox3.Text = "------编译成功------  \n" +
+                                    "------生成文件:" + sum + "------\n";
+            }
+            else
+            {
+                richTextBox3.Text = "------编译失败------  \n" +
+                                    "------生成文件：1------\n";
+            }
         }
 
         private void 词法分析ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox2.LoadFile("F:\\lexout.txt", RichTextBoxStreamType.PlainText);
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
