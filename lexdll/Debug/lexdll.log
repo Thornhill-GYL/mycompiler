@@ -1,5 +1,4 @@
 ﻿  lex.cpp
-f:\code\c#\mycompiler\lexdll\lex.cpp(22): warning C4101: “count”: 未引用的局部变量
-f:\code\c#\mycompiler\lexdll\lex.cpp(23): warning C4101: “flag”: 未引用的局部变量
+f:\code\c#\mycompiler\lexdll\lex.cpp(23): warning C4101: “count”: 未引用的局部变量
   lexdll.vcxproj -> F:\code\c#\mycompiler\Debug\lexdll.dll
   lexdll.vcxproj -> F:\code\c#\mycompiler\Debug\lexdll.pdb (Partial PDB)
