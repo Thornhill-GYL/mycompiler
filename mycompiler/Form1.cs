@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 namespace mycompiler
 {
     public partial class mycompiler : Form
     {
+        [DllImport("F:\\code\\c#\\mycompiler\\Debug\\lexdll.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void lex();
         string filename = "";
         public mycompiler()
         {
@@ -36,12 +38,12 @@ namespace mycompiler
         {
             openFileDialog1.Filter = "文本文件 |*.txt";
             openFileDialog1.FilterIndex = 1;
-            openFileDialog1.InitialDirectory = "E:\\";
+            openFileDialog1.InitialDirectory = "F:\\";
             if(openFileDialog1.ShowDialog()==System.Windows.Forms.DialogResult.OK)
             {
                 filename = openFileDialog1.FileName;
                 richTextBox1.LoadFile(filename, RichTextBoxStreamType.PlainText);
-                this.Text = filename + "mycompiler";
+                this.Text = filename + "--mycompiler";
             }
         }
 
@@ -49,14 +51,14 @@ namespace mycompiler
         {
             saveFileDialog1.Filter = "文本文件 |*.txt";
             saveFileDialog1.FilterIndex = 1;
-            saveFileDialog1.InitialDirectory = "E:\\";
+            saveFileDialog1.InitialDirectory = "F:\\";
             if(saveFileDialog1.ShowDialog()==System.Windows.Forms.DialogResult.OK)
             {
                 filename = saveFileDialog1.FileName;
                 richTextBox1.SaveFile(filename, RichTextBoxStreamType.PlainText);
                 int index = filename.LastIndexOf('\\');
                 string text_2 = filename.Substring(index + 1);
-                this.Text = text_2 + "-mycompiler";
+                this.Text = text_2 + "--mycompiler";
             }
         }
 
@@ -70,6 +72,16 @@ namespace mycompiler
             {
                 另存为ToolStripMenuItem_Click(sender, e);
             }
+        }
+
+        private void 编译ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lex();
+        }
+
+        private void 词法分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox2.LoadFile("F:\\lexout.txt", RichTextBoxStreamType.PlainText);
         }
     }
 }
