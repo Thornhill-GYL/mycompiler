@@ -80,15 +80,15 @@ namespace mycompiler
             int sum = 0;
             flag=lex();
             sum += flag;
-            if (sum!=0)
+            if (sum==0)
             {
                 richTextBox3.Text = "------编译成功------  \n" +
                                     "------生成文件:" + sum + "------\n";
             }
             else
             {
-                richTextBox3.Text = "------编译失败------  \n" +
-                                    "------生成文件：1------\n";
+                
+                richTextBox3.LoadFile("F:\\error.txt", RichTextBoxStreamType.PlainText);
             }
         }
 
