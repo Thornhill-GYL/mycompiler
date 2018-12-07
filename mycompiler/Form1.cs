@@ -10,11 +10,17 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 namespace mycompiler
 {
+
+
     public partial class mycompiler : Form
     {
+
         [DllImport("F:\\code\\c#\\mycompiler\\Debug\\lexdll.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int lex();
+        public static extern int lex(string name);
+        [DllImport("F:\\code\\c#\\mycompiler\\Debug\\lexdll.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern int senmatic(string name);
         string filename = "";
+        
         public mycompiler()
         {
             InitializeComponent();
@@ -73,28 +79,68 @@ namespace mycompiler
                 另存为ToolStripMenuItem_Click(sender, e);
             }
         }
-
+        
         private void 编译ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int flag = 0;
+            richTextBox3.Clear();
+      
+        
+            //txtflag checkflag[3]=new txtflag[3];
+            int flag_lex = 0;
+            int flag_sematic = 0;
             int sum = 0;
-            flag=lex();
-            sum += flag;
-            if (sum==0)
+            int count = 0;
+            
+            flag_lex = lex(filename);
+            filename = "F:\\shuchu.txt";
+            flag_sematic = senmatic(filename);
+            if(flag_lex == 1)
             {
-                richTextBox3.Text = "------编译成功------  \n" +
-                                    "------生成文件:" + sum + "------\n";
+                sum += 1;
             }
             else
             {
+                count += 1;
+               
+            }
+            if (flag_sematic == 1)
+            {
+                sum += 1;
+            }
+            else
+            {
+                count += 1;
+                
+            }
+            if (flag_sematic == 0 && flag_lex == 0)
+                sum = 0;
+            if(count==2)
+            {
+                count += 1;
+            }
+            if (sum==0)
+            {
+                richTextBox3.Text = "------编译成功------  \n" +
+                                    "------生成文件:" + count + "------\n";
+            }
+            else if(flag_lex==1)
+            {
                 
                 richTextBox3.LoadFile("F:\\error.txt", RichTextBoxStreamType.PlainText);
+            }
+            else if(flag_sematic==1)
+            {
+                richTextBox3.LoadFile("F:\\grammarerror.txt", RichTextBoxStreamType.PlainText);
             }
         }
 
         private void 词法分析ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox2.LoadFile("F:\\lexout.txt", RichTextBoxStreamType.PlainText);
+            richTextBox2.LoadFile("F:\\shuchu.txt", RichTextBoxStreamType.PlainText);
+            richTextBox2.SelectAll();
+            Font font = new Font(FontFamily.GenericMonospace, 12, FontStyle.Regular);
+            this.richTextBox2.SelectionFont = font;
+
         }
 
         private void richTextBox3_TextChanged(object sender, EventArgs e)
@@ -109,6 +155,27 @@ namespace mycompiler
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+
+        }
+
+        private void 语法分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+        }
+
+        private void 目标代码生成ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+            richTextBox2.LoadFile("F:\\create.txt", RichTextBoxStreamType.PlainText);
+        }
+
+        private void 语义分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+            richTextBox2.LoadFile("F:\\fourout.txt", RichTextBoxStreamType.PlainText);
+            richTextBox2.SelectAll();
+            Font font = new Font(FontFamily.GenericMonospace, 12, FontStyle.Regular);
+            this.richTextBox2.SelectionFont = font;
 
         }
     }

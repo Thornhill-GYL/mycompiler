@@ -35,6 +35,8 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.词法分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.语义分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编译结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.编译ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -58,6 +60,8 @@
             this.保存ToolStripMenuItem,
             this.另存为ToolStripMenuItem,
             this.词法分析ToolStripMenuItem,
+            this.语义分析ToolStripMenuItem,
+            this.编译结果ToolStripMenuItem,
             this.编译ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -102,6 +106,20 @@
             this.词法分析ToolStripMenuItem.Text = "词法分析";
             this.词法分析ToolStripMenuItem.Click += new System.EventHandler(this.词法分析ToolStripMenuItem_Click);
             // 
+            // 语义分析ToolStripMenuItem
+            // 
+            this.语义分析ToolStripMenuItem.Name = "语义分析ToolStripMenuItem";
+            this.语义分析ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.语义分析ToolStripMenuItem.Text = "语义分析";
+            this.语义分析ToolStripMenuItem.Click += new System.EventHandler(this.语义分析ToolStripMenuItem_Click);
+            // 
+            // 编译结果ToolStripMenuItem
+            // 
+            this.编译结果ToolStripMenuItem.Name = "编译结果ToolStripMenuItem";
+            this.编译结果ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.编译结果ToolStripMenuItem.Text = "输出结果";
+            this.编译结果ToolStripMenuItem.Click += new System.EventHandler(this.目标代码生成ToolStripMenuItem_Click);
+            // 
             // 编译ToolStripMenuItem
             // 
             this.编译ToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -113,6 +131,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(12, 31);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(597, 597);
@@ -122,6 +141,7 @@
             // richTextBox2
             // 
             this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(631, 31);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(484, 597);
@@ -131,6 +151,7 @@
             // richTextBox3
             // 
             this.richTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.richTextBox3.Font = new System.Drawing.Font("华文楷体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox3.Location = new System.Drawing.Point(12, 648);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(1103, 61);
@@ -204,6 +225,8 @@
         private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem 语义分析ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 编译结果ToolStripMenuItem;
     }
 }
 
