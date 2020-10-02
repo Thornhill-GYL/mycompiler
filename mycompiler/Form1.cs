@@ -38,6 +38,7 @@ namespace mycompiler
             richTextBox1.Clear();
             filename = "";
             this.Text = "无标题-未保存";
+            
         }
 
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,12 +46,13 @@ namespace mycompiler
             openFileDialog1.Filter = "文本文件 |*.txt";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.InitialDirectory = "F:\\";
-            if(openFileDialog1.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 filename = openFileDialog1.FileName;
                 richTextBox1.LoadFile(filename, RichTextBoxStreamType.PlainText);
                 this.Text = filename + "--mycompiler";
             }
+
         }
 
         private void 另存为ToolStripMenuItem_Click(object sender, EventArgs e)

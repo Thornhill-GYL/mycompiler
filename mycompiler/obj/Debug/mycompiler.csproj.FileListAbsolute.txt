@@ -1,10 +1,10 @@
 F:\code\c#\mycompiler\mycompiler\bin\Debug\mycompiler.exe.config
 F:\code\c#\mycompiler\mycompiler\bin\Debug\mycompiler.exe
 F:\code\c#\mycompiler\mycompiler\bin\Debug\mycompiler.pdb
-F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.csprojResolveAssemblyReference.cache
 F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.mycompiler.resources
 F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.Properties.Resources.resources
 F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.csproj.GenerateResource.Cache
 F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.csproj.CoreCompileInputs.cache
 F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.exe
 F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.pdb
+F:\code\c#\mycompiler\mycompiler\obj\Debug\mycompiler.csprojAssemblyReference.cache

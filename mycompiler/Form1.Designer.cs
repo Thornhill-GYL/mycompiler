@@ -65,7 +65,7 @@
             this.编译ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1127, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1109, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -142,17 +142,18 @@
             // 
             this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(631, 31);
+            this.richTextBox2.Location = new System.Drawing.Point(613, 31);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(484, 597);
             this.richTextBox2.TabIndex = 2;
             this.richTextBox2.Text = "";
+            this.richTextBox2.UseWaitCursor = true;
             // 
             // richTextBox3
             // 
             this.richTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.richTextBox3.Font = new System.Drawing.Font("华文楷体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox3.Location = new System.Drawing.Point(12, 648);
+            this.richTextBox3.Location = new System.Drawing.Point(3, 648);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(1103, 61);
             this.richTextBox3.TabIndex = 3;
@@ -189,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1127, 721);
+            this.ClientSize = new System.Drawing.Size(1109, 721);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.richTextBox2);
